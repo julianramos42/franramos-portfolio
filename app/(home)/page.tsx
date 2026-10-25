@@ -14,7 +14,8 @@ export default function Home() {
           <ScrollTop />
           <nav className="links">
             <a href="#inicio" className="m" aria-current="page">Francisco</a>
-            <a href="#proyectos" className="m">Trabajos</a>
+            <a href="/estilos" className="m">Estilos</a>
+            <a href="/mi-estilo" className="m">Tu estilo</a>
             <a href="#contacto">Contacto</a>
           </nav>
           <a href={MAIL} className="btn btn-light">

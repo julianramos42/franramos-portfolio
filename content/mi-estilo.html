@@ -18,7 +18,10 @@
     <p class="lead">Subí tus referencias y Claude arma tu estilo: un SOP, animaciones y una ficha para que cualquier editor lo repita.</p>
     <div class="vmarco">
       <video id="v-guia" src="/videos/guia-mi-estilo.mp4" poster="/videos/guia-mi-estilo.jpg" autoplay muted loop playsinline preload="metadata"></video>
-      <button type="button" class="vsonido" data-v="v-guia" aria-pressed="false">Activar sonido</button>
+      <div class="vcontrol" data-v="v-guia">
+          <input type="range" class="vvol" min="0" max="1" step="0.01" value="0.5" aria-label="Volumen" hidden>
+          <button type="button" class="vsonido" data-v="v-guia" aria-pressed="false">Activar sonido</button>
+        </div>
     </div>
     <div class="row-l acciones">
       <a class="btn-ia" href="/descargas/mi-estilo.zip" download><span class="brillo"></span>Descargar skill <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 2v9M4 7l4 4 4-4M3 14h10"/></svg></a>

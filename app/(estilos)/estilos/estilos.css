@@ -263,14 +263,15 @@
   .vcab{display:grid;gap:14px;justify-items:center}
   .vmarco{position:relative;width:100%;border:1px solid var(--line);border-radius:22px;padding:10px;background:var(--surface)}
   .vmarco video{display:block;width:100%;aspect-ratio:16/9;border-radius:14px;background:#06070A}
-  .vsonido{position:absolute;right:24px;bottom:24px;font:500 12.5px var(--sans);color:#fff;background:rgba(0,0,0,.55);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:8px 14px;cursor:pointer}
+  .vcontrol{position:absolute;right:24px;bottom:24px;display:flex;align-items:center;gap:10px}
+  .vsonido{font:500 12.5px var(--sans);color:#fff;background:rgba(0,0,0,.55);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:8px 14px;cursor:pointer}
   .vsonido[aria-pressed="true"]{background:#fff;color:#000}
   .vbot{justify-content:center}
   .simple .pill,.vcab .pill{justify-self:center}
   .vbot,.acciones{align-items:center}
   .vbot .btn-ia,.acciones .btn-ia{margin-top:0}
   .links a{white-space:nowrap}
-  @media (max-width:680px){.links{gap:12px}.vsonido{right:16px;bottom:16px;font-size:11px;padding:6px 10px}}
+  @media (max-width:680px){.links{gap:12px}.vcontrol{right:16px;bottom:16px}.vsonido{font-size:11px;padding:6px 10px}}
   /* BANNER ESTILO PROPIO */
   .propio{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:24px;align-items:center;border:1px solid #2c3a33;border-radius:22px;padding:30px 34px;margin-bottom:64px;background:radial-gradient(120% 140% at 100% 0%,#1F4D3A 0%,#0f1d17 45%,#0a0a0a 80%);overflow:hidden;transition:border-color .25s,transform .25s}
   .propio:hover{border-color:#3f5a4c;transform:translateY(-2px)}
@@ -1100,3 +1101,8 @@
   }
 
 [hidden]{display:none!important}
+
+.vvol{-webkit-appearance:none;appearance:none;width:96px;height:4px;border-radius:999px;background:rgba(255,255,255,.28);outline-offset:6px;cursor:pointer}
+.vvol::-webkit-slider-thumb{-webkit-appearance:none;width:14px;height:14px;border-radius:50%;background:#fff;border:0}
+.vvol::-moz-range-thumb{width:14px;height:14px;border-radius:50%;background:#fff;border:0}
+@media (max-width:680px){.vvol{width:72px}}
